@@ -1,8 +1,8 @@
-#Technologies used:
+# Technologies used:
 
 Nest JS, TypeScript and Swagger
 
-#How to run
+# How to run
 
 1. Node js must be installed
 

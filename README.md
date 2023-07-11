@@ -1,3 +1,3 @@
 #Technologies used:
 
-Nest JS and Swagger
+Nest JS, TypeScript and Swagger

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { CreateProductsDto } from '../dto/create-products.dto';
+import { CreateProductsDto } from './dto/create-products.dto';
 
 @Injectable()
 export class ProductsService {
-  private articles = [
+  private products = [
     {
       name: 'Product-1',
       price: 2.24,
@@ -39,13 +39,13 @@ export class ProductsService {
   getProducts() {
     return {
       message: 'Products obtained successfully',
-      data: this.articles,
-      total: this.articles.length,
+      data: this.products,
+      total: this.products.length,
     };
   }
 
-  createproducts(productsData: CreateProductsDto): { message: string } {
-    this.articles.push({
+  createProduct(productsData: CreateProductsDto): { message: string } {
+    this.products.push({
       ...productsData,
     });
 

@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { CreateProductsDto } from '../dto/create-products.dto';
+import { CreateProductsDto } from './dto/create-products.dto';
 
 @ApiTags('Products')
 @Controller('products')
@@ -14,9 +14,9 @@ export class ProductsController {
     return this.productsService.getProducts();
   }
 
-  @Post('create')
+  @Post()
   @ApiOperation({ description: 'Create products' })
   createProducts(@Body() productsData: CreateProductsDto) {
-    return this.productsService.createproducts(productsData);
+    return this.productsService.createProduct(productsData);
   }
 }
